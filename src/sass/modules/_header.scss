@@ -1,0 +1,8 @@
+@use "../vars" as *;
+
+/* TODO: change as this was just a test  */
+.current {
+	font-weight: $font-weight-bold;
+	text-decoration: none;
+	pointer-events: none;
+}

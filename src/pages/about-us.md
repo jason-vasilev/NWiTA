@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About us"
 description: "Review feature info and customization details."
 ---
 
@@ -45,7 +45,7 @@ Those include:
 - `siteName` - your "brand" if you will, appended to the `<title>` tag, shown in the `sitenav`, displayed in the "hero" for the `home` layout, in the footer by the copyright, as the "credit" for social share images, and as the identifier throughout the RSS feed
 - `siteDescription` - used in the "description" meta tag, and below the `siteName` on the `home` layout
 - `authorName` - Used in the RSS feed, intended to be your full name
-- `twitterUsername` - without the "@", this value is used for the Twitter meta tags, and for the URL of the icon link in the footer
+- `someUsername` - without the "@", this value is used for the Twitter meta tags, and for the URL of the icon link in the footer
 
 ### .env
 
@@ -114,10 +114,6 @@ The only notable differences are:
 1. `tdbc-anchor` - styles for the `#` anchor that appears next to page headings ([or turn that feature off](#anchor-links)) can be adjusted in `sass/_utilities`
 1. Additional `article`-scoped styling for typography as it appears on `pages`
 1. A theme for the [`prism` syntax highlighting](#prism-syntax-highlighting) for code blocks. You can adjust or replace the theme in `sass/_prism`.
-
-### Fonts
-
-The default font is [Baloo 2](https://fonts.google.com/specimen/Baloo+2) and is locally hosted with files in `fonts/`. If you swap to a different font, be sure to remove the font files as well as the `@font-face` rules at the top of `sass/_fonts.scss`, and update the `$tdbc-font-family` Sass variable.
 
 ## Anchor Links
 

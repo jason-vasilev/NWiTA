@@ -6,10 +6,12 @@
     {% if currentUrl === '/' %}aria-current="page"{% endif %}
     >{{ meta.siteName }}</a>
     <ul role="list" class="tdbc-sitenav__navlist tdbc-list-unstyled">
+      <li><a href="/">Home</a></li>
       {% for link in collections.pages %}
       <li>
         <a
           {% if currentUrl === link.url %}aria-current="page"{% endif %}
+          {% if currentUrl === link.url %}class="current"{% endif %}
           href="{{ link.url }}">
             {{ link.data.title }}
         </a>

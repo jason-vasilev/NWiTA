@@ -1,69 +1,47 @@
-@use "theme" as *;
+@use "vars" as *;
 
-.tdbc-content-maxlength {
-  max-width: 80ch;
+.visuallyhidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	border: 0;
+
+	clip: rect(0 0 0 0);
 }
 
-.tdbc-anchor {
-  display: inline-block;
-  margin-left: 0.25em;
-  transition: 180ms opacity ease-in-out;
-  opacity: 0.6;
-  font-size: 0.65em;
-  vertical-align: top;
-
-  &:hover {
-    opacity: 1;
-  }
+.hidden {
+	display: none;
 }
 
-$tdbc-alignments: left, center, right !default;
-
-@each $alignment in $tdbc-alignments {
-  .tdbc-text-align--#{$alignment} {
-    text-align: #{$alignment};
-
-    @if ($alignment == "center") {
-      > a {
-        align-self: center !important;
-      }
-    }
-  }
+.hide-on-mobile {
+	display: none;
 }
 
-@each $key in $tdbc-background-colors {
-  .tdbc-background--#{$key} {
-    background-color: tdbc-color($key);
-  }
+@media #{$lg-up-layout} {
+	.hide-on-mobile {
+		display: inline-block;
+	}
+
+	.hide-on-desktop {
+		display: none;
+	}
 }
 
-@each $key in $tdbc-ink-colors {
-  .tdbc-ink--#{$key},
-  a.tdbc-ink--#{$key} {
-    color: tdbc-color(#{$key});
-  }
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-right: rem(16);
+	padding-left: rem(16);
 
-  .tdbc-ink--#{$key} > a:not(.tdbc-button) {
-    color: inherit;
-  }
-}
-
-.tdbc-mx-auto {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@each $key, $unit in $tdbc-spacing {
-  .tdbc-my-#{$key} {
-    margin-top: $unit;
-    margin-bottom: $unit;
-  }
-
-  .tdbc-mt-#{$key} {
-    margin-top: $unit;
-  }
-}
-
-.tdbc-mb-none {
-  margin-bottom: 0;
+	@media #{$sm-up-layout} {
+		padding-right: rem(72);
+		padding-left: rem(72);
+	}
 }

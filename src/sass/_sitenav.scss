@@ -1,16 +1,11 @@
 @use "sass:math";
-@use "theme" as *;
+@use "vars" as *;
 
-// stylelint-disable-next-line selector-max-id, selector-max-specificity
 #tdbc-siteid {
-  font-size: $tdbc-h3-font-size;
   text-decoration: none;
 }
 
-// stylelint-disable selector-max-type
 .tdbc-sitenav {
-  background-color: tdbc-color("primary");
-
   &__container,
   &__navlist {
     display: flex;
@@ -32,16 +27,9 @@
     }
   }
 
-  &,
-  a:not(.tdbc-button) {
-    color: tdbc-color("light");
-  }
-
   a:not(.tdbc-button):focus {
-    border-radius: math.div($tdbc-border-radius, 2);
     outline-color: transparent;
     outline-style: solid;
-    box-shadow: 0 0 1px 2px tdbc-color("light");
+    box-shadow: 0 0 1px 2px $black;
   }
 }
-// stylelint-enable

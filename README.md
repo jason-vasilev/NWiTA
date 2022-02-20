@@ -21,7 +21,7 @@ Visit [11ty-netlify-jumpstart.netlify.app](https://11ty-netlify-jumpstart.netlif
 1. Edit `src/index.njk` to change the home page - including changing the template type if desired -
    and then create content within `_pages` using any templating format you prefer to add content.
 
-1. Check out the [About page](https://11ty-netlify-jumpstart.netlify.app/about/) for expanded details on included features of this starter.
+1. Check out the [About us page](https://11ty-netlify-jumpstart.netlify.app/about-us/) for expanded details on included features of this starter.
 
 1. Review the [11ty documentation](https://11ty.dev) to more deeply apply customizations, including
    adding custom data sources and reviewing what template languages are available.
