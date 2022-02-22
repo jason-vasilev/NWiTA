@@ -1,7 +1,8 @@
-@use "vars" as *;
+@import "vars";
+@import "generic/mixins";
 
 body {
-	color: $black;
+	color: $white;
 	font-size: rem($base-font-size);
 	line-height: em($base-line-height, $base-font-size);
 	-webkit-font-smoothing: antialiased;
@@ -11,4 +12,112 @@ body {
 /* Necessary due to a font overwrite from .pure-g */
 * {
 	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+p,
+pre,
+blockquote,
+dl,
+dd,
+menu,
+ol,
+ul,
+table,
+caption,
+hr {
+	margin: 0;
+}
+
+h1,
+%h1,
+h2,
+%h2,
+h3,
+%h3 {
+	font-weight: $font-weight-bold;
+}
+
+h1,
+%h1 {
+	font-size: rem(64);
+	line-height: em(72, 64);
+}
+
+h2,
+%h2 {
+	font-size: rem(40);
+	line-height: em(46, 40);
+}
+
+h3,
+%h3 {
+	font-size: rem(32);
+	line-height: em(36, 32);
+	font-weight: $font-weight-bold;
+}
+
+h4,
+%h4 {
+	font-size: rem(28);
+	line-height: em(32, 28);
+	font-weight: $font-weight-bold;
+}
+
+h5,
+%h5 {
+	font-size: rem(24);
+	line-height: em(30, 24);
+	font-weight: $font-weight-bold;
+}
+
+h6,
+%h6 {
+	font-size: rem(24);
+	line-height: em(34, 24);
+	font-weight: $font-weight-bold;
+}
+
+p,
+%body-text {
+	font-size: rem(18);
+	line-height: em(26, 18);
+}
+
+@media #{$sm-up-layout} {
+	h1,
+	%h1 {
+		font-size: rem(70);
+		line-height: em(75, 70);
+	}
+
+	h2,
+	%h2 {
+		font-size: rem(50);
+		line-height: em(56, 50);
+	}
+
+	h3,
+	%h3 {
+		font-size: rem(42);
+		line-height: em(48, 42);
+	}
+
+	h4,
+	%h4 {
+		font-size: rem(36);
+		line-height: em(42, 36);
+	}
+
+	h5,
+	%h5 {
+		font-size: rem(28);
+		line-height: em(34, 28);
+	}
 }

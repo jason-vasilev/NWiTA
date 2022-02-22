@@ -135,20 +135,6 @@ An RSS feed is included, and output at `[siteurl]/feed/feed.xml`.
 
 If publishing from Netlify, the included `netlify.toml` file will create a redirect so that the feed becomes available at `[siteurl]/feed`.
 
-### Social Share Preview Images
-
-Upon use of the build command, social share preview images are generated for each page + the home page, and available in `public/previews/[title-as-slug].png`.
-
-Here's an example of the default template:
-
-![default social share preview image template](/previews/hello-world.png)
-
-As of v0.5.0, these images now use my Eleventy plugin - `@11tyrocks/eleventy-plugin-social-images` - with the default blue theme and a customized template.
-
-Any changes made can be previewed by running the build command and reviewing the contents of `public/previews/`.
-
-[Review the plugin docs](https://www.npmjs.com/package/@11tyrocks/eleventy-plugin-social-images) for the full details of how to customize the behavior, and read on to learn how this starter is currently setup for the social images.
-
 #### Update social image template HTML
 
 HTML can be changed in `_generate/socialtemplate.njk` - be sure to leave the `<style>` block and the template tag within so that the plugin can insert your styles.

@@ -1,3 +1,6 @@
+@import "../vars";
+@import "mixins";
+
 *,
 *::after,
 *::before {
@@ -17,7 +20,12 @@ html {
 
 body {
 	box-sizing: border-box;
+	background-color: $black;
 	overflow-x: hidden;
+}
+
+main {
+	padding-top: rem(140);
 }
 
 fieldset {

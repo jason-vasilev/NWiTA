@@ -6,3 +6,278 @@
 	text-decoration: none;
 	pointer-events: none;
 }
+
+.menu-main-container {
+	display: none;
+}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	width: 100%;
+	margin: 0 40px 0 0;
+	float: left;
+	position: relative;
+}
+
+.main-navigation li:last-of-type {
+	margin-right: 16px;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+
+	font-size: 14px;
+	
+	/* identical to box height, or 143% */
+	letter-spacing: 0.06em;
+}
+
+/* Small menu. */
+.main-navigation.toggled-menu {
+	width: 100%;
+	margin-right: 57px;
+	text-align: center;
+}
+
+.menu-toggle {  
+	cursor: pointer;
+	padding: 12px 0;
+	background-color: transparent;
+	border: 0;
+
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}  
+
+.menu-toggle span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+    transition: all .2s ease-in-out;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+	position: absolute;
+	left: 0;
+	background: white;
+	content: '';
+	width: 20px;
+	height: 2px;
+	transition: all .2s ease-in-out;
+}
+    
+.menu-toggle span::before {
+	top: -8px;
+}
+    
+.menu-toggle span::after {
+	top: 8px;
+}
+
+.toggled-menu .menu-toggle span {
+    background: transparent;  
+}
+.toggled-menu .menu-toggle span:before {
+	transform: rotate(45deg) translate(5px, 6px);
+}
+
+.toggled-menu .menu-toggle span:after {
+	transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* HEADER */
+
+.masthead {
+	width: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background 0.3s;
+
+	z-index: 1;
+}
+
+.masthead:hover {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.masthead__container {
+	display: flex;
+	justify-content: center;
+}
+
+
+/* Mobile menu is open */
+
+.masthead__container.toggled-menu {
+	align-items: center;
+	flex-flow: column;
+	padding-bottom: 30px;
+}
+
+
+.toggled-menu .main-navigation ul,
+.toggled-menu .menu-main-container {
+	display: block;
+}
+
+.toggled-menu .main-navigation {
+	width: 100%;
+	flex-flow: column;
+	padding-top: 20px;
+}
+
+
+.masthead__brand {
+	display: flex;
+	align-items: center;
+}
+
+.masthead__logo {
+	max-width: 54px;
+	width: 100%;
+	max-height: 54px;
+	height: 100%;
+	margin: 8px 16px 8px 0;
+
+	display: inline-block;
+	transition-duration: 1s;
+}
+
+.masthead__name:active .masthead__logo,
+.masthead__name:focus .masthead__logo,
+.masthead__name:hover .masthead__logo {
+	transform: scale(1.2);
+	transition-timing-function: cubic-bezier(0.47,2.02,.31,-.36);
+}
+
+.masthead__name {
+	display: flex;
+	align-items: center;
+	padding: 0 16px 0 0;
+
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $white;
+}
+
+.masthead__year {
+	color: white;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.06em;
+	opacity: .7;
+}
+
+.main-navigation {
+	display: flex;
+	align-items: center;
+}
+
+.nav-menu a {
+	padding: 8px 0;
+
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	font-size: 14px;
+	line-height: 20px;
+	color: white;
+	text-align: right;
+}
+
+.nav-menu a::after {
+	width: 0%;
+	height: 1px;
+	background-color: white;
+	content: " ";
+	position: absolute;
+	top: 34px;
+	left: 50%;
+	transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav-menu a:hover::after,
+.current-menu-item a::after {
+	width: 100%;
+	height: 1px;
+	display: block;
+	background-color: white;
+	content: " ";
+	position: absolute;
+	top: 34px;
+	left: 0;
+
+	opacity: .7;
+}
+
+.menu-item {
+	margin: 0 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 769px) {
+	.masthead__container {
+		justify-content: space-between;
+	}
+
+	.menu-main-container {
+		display: block;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation li {
+		width: auto;
+	}
+}

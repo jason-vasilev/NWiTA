@@ -1,18 +1,11 @@
-
-
-@use "layout";
-@use "sitenav";
-@use "typography";
-@use "buttons";
-@use "card";
-@use "prism";
-@use "utilities";
-
-@use "generic/generic";
-
 /* Framework */
 @use "framework/purecss";
 @use "framework/purecss-grid";
-
+/* Other */
+@use "generic/generic";
+@use "generic/mixins";
+@use "utilities";
+@use "typography";
 /* Modules */
 @use "modules/header";
+@use "modules/footer";
