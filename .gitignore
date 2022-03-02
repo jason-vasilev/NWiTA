@@ -4,6 +4,7 @@ node_modules
 # build artefacts
 public
 src/css
+package-lock.json
 
 # secrets and errors
 .env

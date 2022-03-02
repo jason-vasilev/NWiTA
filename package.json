@@ -1,6 +1,6 @@
 {
 	"name": "nwita",
-	"version": "0.1",
+	"version": "0.0.1",
 	"description": "SSG with 11ty, SASS for NWITA.",
 	"main": "index.html",
 	"scripts": {
@@ -47,5 +47,8 @@
 	"browserslist": [
 		"> 0.5%",
 		"not IE 11"
-	]
+	],
+	"dependencies": {
+		"hbs": "^4.2.0"
+	}
 }
