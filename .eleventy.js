@@ -1,7 +1,3 @@
-// 11ty Plugins
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-
 // Helper packages
 const slugify = require("slugify");
 const markdownIt = require("markdown-it");
@@ -11,9 +7,6 @@ const markdownItAnchor = require("markdown-it-anchor");
 const packageVersion = require("./package.json").version;
 
 module.exports = function (eleventyConfig) {
-	eleventyConfig.addPlugin(syntaxHighlight);
-	eleventyConfig.addPlugin(pluginRss);
-
 	eleventyConfig.addWatchTarget("./src/sass/");
 
 	eleventyConfig.addPassthroughCopy("./src/css");
